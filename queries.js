@@ -1,6 +1,6 @@
 const db = require('./connection')
 
-function get criticalUpdates () {
+function getCriticalUpdates () {
     return db('swaccd').select();
 }
 
