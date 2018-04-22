@@ -40,8 +40,12 @@
     <h1 class="display-4">Command Center Dashboard</h1>
     <p class="lead">DEN SWA Command Center dashboard app</p>
     <h3><b>Critical Updates</b></h3>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+      <textarea class="form-control" action="/criticalupdates" method="POST" id="exampleFormControlTextarea1" rows="1"></textarea>
       <input type="submit" class="btn btn-danger btn-sm" value="Update">
+      <p>
+        {{#each criticalupdate}}
+        {{/each}}
+      </p>
   </div>
 </div>
 
