@@ -20,3 +20,6 @@ a {
   margin-right: -3px;
   top: 0;
 }
+
+
+input[type="text"]{ padding: 5px 5px; line-height: 8px; }

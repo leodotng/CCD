@@ -2,45 +2,80 @@
 <p class="centered">Welcome to {{title}}</p>
 
 
-
+<button type="button" class="btn btn-primary btn-lg" onclick="window.location.reload(true)">Refresh</button>
 <div class="container">
   <div class="">
-    <div class="centered">
+    <div class="left">
       Critical Updates
       <p>Something Critical goes here</p>
     </div>
     <hr>
-    <div class="centered">
-      Recent Gate Changes
-      MDW 2246 Moving from C26 to C35
+    <div class="left">
+      Recent Gate Changes MDW 2246 Moving from C26 to C35
+      <div class="form-group"></div>
+      Gate C
+      <input type="number" name="Gate" width="20"> Destination
+      <input type="text" name="Destination">
+      MOVE TO 
+      <div class="form-group"></div>
+      NEW GATE Gate C
+      <input type="number" name="Gate" width="20"> Destination
+      <input type="text" name="Destination">
+      <input type="submit" class="btn btn-primary btn-lg" value="Update">
     </div>
-    <hr>
-    
-    <div class="centered">
-      Connections
-      #4325 ABQ delayed 1 hour many misconnects. No holds for SAN
-    </div>
-    <hr>
-    <div class="centered">
-      Shift Passdown
-      #4455 FLL is delayed by four hours everyone has been rebooked
-    </div>
-    <hr>
+    </form>
+    <select>
+      <option value="MX">MX</option>
+      <option value="Holding">Holding for inbound connections</option>
+      <option value="Crew">Crew</option>
+      <option value="Fueling" selected>Fueling</option>
+    </select>
   </div>
-  <div class="centered">
-      Services
-      Potable water and lavs C35 TIME:
-    </div>
-    <hr>
-     <div class="centered">
-      Late Flights
-      Flt # 3354 MDW is late due to MX
-      <select>
+</div>
+<hr>
+
+<div class="left">
+  Connections #4325 ABQ delayed 1 hour many misconnects. No holds for SAN
+</div>
+<hr>
+<div class="left">
+  Shift Passdown #4455 FLL is delayed by four hours everyone has been rebooked
+</div>
+<hr>
+</div>
+<div class="left">
+  Services Potable water and lavs C35 TIME:
+  <form action="/">
+    <div class="form-group"></div>
+    Gate C
+    <input type="number" name="Gate"> Destination
+    <input type="text" name="Destination">
+
+    <input type="radio" name="Potable Water" value="Potable Water" checked>Potable Water
+    <input type="radio" name="Lav Service" value="Lav Service" checked>Lav Service
+    <input type="submit" class="btn btn-primary btn-lg" value="Update">
+</div>
+</form>
+
+</div>
+<hr>
+<div class="centered">
+  Late Flights Flt # 3354 MDW is late due to MX
+  <form action="/">
+
+    <div class="form-group"></div>
+    Gate C
+    <input type="number" name="Gate" width="20"> Destination
+    <input type="text" name="Destination">
+    <input type="submit" class="btn btn-primary btn-lg" value="Update">
+</div>
+</form>
+<select>
   <option value="MX">MX</option>
   <option value="Holding">Holding for inbound connections</option>
   <option value="Crew">Crew</option>
   <option value="Fueling" selected>Fueling</option>
 </select>
-    </div>
-    <hr>
+</div>
+<hr>
 </div>
