@@ -1,89 +1,74 @@
 <h1 class="centered">{{title}}</h1>
 <p class="centered">Welcome to {{title}}</p>
 
-
 <button type="button" class="btn btn-primary btn-sm" onclick="window.location.reload(true)">Refresh</button>
-
-<table class="table table-sm">
+<table class="table table-striped">
   <tbody>
-    <tr class="bg-primary">
-
-      <div class="container">
-        <div class="">
-          <div class="left">
-            Critical Updates
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-            <input type="submit" class="btn btn-danger btn-sm" value="Update">
-
-          </div>
+    <tr>
+      <td>
+      <h3><b>Critical Updates</b></h3>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+      <input type="submit" class="btn btn-danger btn-sm" value="Update">
+      <td>
     </tr>
-    <tr class="bg-primary">
-      <div class="left">
-        Recent Gate Change
-        <div class="form-group"></div>
-        Gate C
-        <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
-        <input type="text" name="Destination" class="input-length"> MOVE TO
-        <div class="form-group"></div>
-        NEW GATE Gate C
-        <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
-        <input type="text" name="Destination" class="input-length">
-        <select>
-          <option value="MX">MX</option>
-          <option value="Holding">Holding for inbound connections</option>
-          <option value="Crew">Crew</option>
-          <option value="Fueling" selected>Fueling</option>
-        </select>
-        <input type="submit" class="btn btn-primary btn-sm" value="Update">
-      </div>
+    <tr>
+      <td>
+      <h3><b>Recent Gate Change</b></h3>
+      <div class="form-group">
+      Gate C
+      <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
+      <input type="text" name="Destination" class="input-length"> MOVE TO
+      <div class="form-group">
+      NEW GATE Gate C
+      <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
+      <input type="text" name="Destination" class="input-length">
+      <select>
+        <option value="MX">MX</option>
+        <option value="Holding">Holding for inbound connections</option>
+        <option value="Crew">Crew</option>
+        <option value="Fueling" selected>Fueling</option>
+      </select>
+      <input type="submit" class="btn btn-primary btn-sm" value="Update">
       </form>
-
       </div>
-      </div>
+      <td>
     </tr>
-    <tr class="bg-primary">
-      <div class="left">
-        Connections
-        <select>
-          <option value="Hold">Hold</option>
-          <option value="No Hold">No Hold</option>
-          <option value="Pax Rebooked">Pax Rebooked</option>
-
-        </select>
-        <input type="submit" class="btn btn-primary btn-sm" value="Update">
-
-      </div>
-
-      </div>
+    <tr>
+      <td>
+     <h3><b>Connections</b></h3>
+      <select>
+        <option value="Hold">Hold</option>
+        <option value="No Hold">No Hold</option>
+        <option value="Pax Rebooked">Pax Rebooked</option>
+      </select>
+      <input type="submit" class="btn btn-primary btn-sm" value="Update">
+      <td>
     </tr>
-    <tr class="bg-primary">
-      <div class="left">
-        Services Potable water and lavs C35 TIME:
-        <form action="/">
-          <div class="form-group"></div>
+    <tr>
+      <td>
+      Services Potable water and lavs C35 TIME:
+      <form action="/">
+        <div class="form-group">
           Gate C
           <input type="number" name="Gate" class="input-length"> Destination
           <input type="text" name="Destination" class="input-length">
-
           <input type="radio" name="Potable Water" value="Potable Water" checked>Potable Water
           <input type="radio" name="Lav Service" value="Lav Service" checked>Lav Service
           <input type="submit" class="btn btn-primary btn-sm" value="Update">
-      </div>
+        </div>
       </form>
-
-      </div>
+      </td>
     </tr>
-    <tr class="bg-primary">
-      <div class="centered">
-        Late Flights
-        <form action="/">
-
-          <div class="form-group"></div>
-          Gate C
-          <input type="number" name="Gate" width="20" class="input-length"> Destination
-          <input type="text" name="Destination" class="input-length">
-          <input type="submit" class="btn btn-primary btn-sm" value="Update">
-      </div>
+    <tr>
+      <td>
+      <h3><b>Late Flights</b></h3>
+      <form action="/">
+        <div class="form-group"></div>
+        Gate C
+        <input type="number" name="Gate" width="20" class="input-length"> Destination
+        <input type="text" name="Destination" class="input-length">
+        <input type="submit" class="btn btn-primary btn-sm" value="Update">
+        </div>
       </form>
       <select>
         <option value="MX">MX</option>
@@ -92,19 +77,16 @@
         <option value="Deadheaders">Deadheaders</option>
         <option value="Fueling" selected>Fueling</option>
         <option value="ATC/Ground Stop">ATC/Ground Stop</option>
-                <option value="Ops Agent Sucks">Ops Agent Sucks</option>
-
+        <option value="Ops Agent Sucks">Ops Agent Sucks</option>
       </select>
-      </div>
+      </td>
     </tr>
-    <tr class="bg-primary">
-      <div class="left">
-        Shift Passdown
-      </div>
+    <tr>
+      <td>
+      Shift Passdown
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
-      <img src="./images/2770.png">
-      </div>
+      <img src="./images/2770.png" height="200" width="200">
+      </td>
     </tr>
   </tbody>
 </table>
