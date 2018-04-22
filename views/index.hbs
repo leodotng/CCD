@@ -14,21 +14,24 @@
     <tr>
       <td>
       <h3><b>Recent Gate Change</b></h3>
+    
       <div class="form-group">
-      Gate C
+      OLD GATE Gate C
       <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
       <input type="text" name="Destination" class="input-length"> MOVE TO
       <div class="form-group">
       NEW GATE Gate C
       <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
       <input type="text" name="Destination" class="input-length">
-      <select>
+      
+      <input type="submit" class="btn btn-primary btn-sm" value="Update">
+      <br>
+      <select class="option-style">
         <option value="MX">MX</option>
         <option value="Holding">Holding for inbound connections</option>
         <option value="Crew">Crew</option>
         <option value="Fueling" selected>Fueling</option>
       </select>
-      <input type="submit" class="btn btn-primary btn-sm" value="Update">
       </form>
       </div>
       <td>
@@ -46,7 +49,7 @@
     </tr>
     <tr>
       <td>
-      Services Potable water and lavs C35 TIME:
+      Services Potable water and lavs:
       <form action="/">
         <div class="form-group">
           Gate C
@@ -70,7 +73,7 @@
         <input type="submit" class="btn btn-primary btn-sm" value="Update">
         </div>
       </form>
-      <select>
+      <select class="option-style">
         <option value="MX">MX</option>
         <option value="Holding">Holding for inbound connections</option>
         <option value="Crew">Crew</option>

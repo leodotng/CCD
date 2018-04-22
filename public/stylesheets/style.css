@@ -10,7 +10,9 @@ a {
 }
 
 
-
+.option-style {
+  width: 80px;
+}
 
 .input-length
 {
