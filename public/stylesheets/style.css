@@ -1,8 +1,8 @@
 body {
   padding: 5px;
   font: 9px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 9px;
-  align-self: center;
+  font-size: 7px;
+
 }
 
 a {
@@ -10,16 +10,12 @@ a {
 }
 
 
-.vl {
-  border-left: 6px solid green;
-  border-right: 6px solid green;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  margin-left: -3px;
-  margin-right: -3px;
-  top: 0;
+
+
+.input-length
+{
+    width: 50px;
+    maxlength:5px; /* " " */
 }
 
 

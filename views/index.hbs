@@ -2,13 +2,13 @@
 <p class="centered">Welcome to {{title}}</p>
 
 
-<button type="button" class="btn btn-primary btn-lg" onclick="window.location.reload(true)">Refresh</button>
+<button type="button" class="btn btn-primary btn-sm" onclick="window.location.reload(true)">Refresh</button>
 <div class="container">
   <div class="">
     <div class="left">
       Critical Updates
       <p>Something Critical goes here</p>
-          <input type="submit" class="btn btn-primary btn-lg" value="Update">
+          <input type="submit" class="btn btn-primary btn-sm" value="Update">
 
     </div>
     <hr>
@@ -16,21 +16,22 @@
       Recent Gate Changes MDW 2246 Moving from C26 to C35
       <div class="form-group"></div>
       Gate C
-      <input type="number" name="Gate" pattern="[0-9]"> Destination
-      <input type="text" name="Destination"> MOVE TO
+      <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
+      <input type="text" name="Destination" class="input-length"> MOVE TO
       <div class="form-group"></div>
       NEW GATE Gate C
-      <input type="number" name="Gate" pattern="[0-9]" width="20"> Destination
-      <input type="text" name="Destination">
-      <input type="submit" class="btn btn-primary btn-lg" value="Update">
-    </div>
-    </form>
-    <select>
+      <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
+      <input type="text" name="Destination" class="input-length">
+       <select>
       <option value="MX">MX</option>
       <option value="Holding">Holding for inbound connections</option>
       <option value="Crew">Crew</option>
       <option value="Fueling" selected>Fueling</option>
     </select>
+      <input type="submit" class="btn btn-primary btn-sm" value="Update">
+    </div>
+    </form>
+   
   </div>
 </div>
 <hr>
@@ -43,7 +44,7 @@
   <option value="Pax Rebooked">Pax Rebooked</option>
   
 </select>
-    <input type="submit" class="btn btn-primary btn-lg" value="Update">
+    <input type="submit" class="btn btn-primary btn-sm" value="Update">
 
 </div>
 <hr>
@@ -54,12 +55,12 @@
   <form action="/">
     <div class="form-group"></div>
     Gate C
-    <input type="number" name="Gate"> Destination
-    <input type="text" name="Destination">
+    <input type="number" name="Gate" class="input-length"> Destination
+    <input type="text" name="Destination" class="input-length">
 
     <input type="radio" name="Potable Water" value="Potable Water" checked>Potable Water
     <input type="radio" name="Lav Service" value="Lav Service" checked>Lav Service
-    <input type="submit" class="btn btn-primary btn-lg" value="Update">
+    <input type="submit" class="btn btn-primary btn-sm" value="Update">
 </div>
 </form>
 
@@ -71,9 +72,9 @@
 
     <div class="form-group"></div>
     Gate C
-    <input type="number" name="Gate" width="20"> Destination
-    <input type="text" name="Destination">
-    <input type="submit" class="btn btn-primary btn-lg" value="Update">
+    <input type="number" name="Gate" width="20" class="input-length"> Destination
+    <input type="text" name="Destination" class="input-length">
+    <input type="submit" class="btn btn-primary btn-sm" value="Update">
 </div>
 </form>
 <select>
@@ -89,6 +90,7 @@
 <div class="left">
   Shift Passdown #4455 FLL is delayed by four hours everyone has been rebooked C37 is out of service for the rest of the afternoon
 </div>
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 <hr>
 <img src="./images/2770.png">
 </div>
