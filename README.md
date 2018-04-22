@@ -1,6 +1,6 @@
-# CCDP  - COMMAND CENTER DASHBOARD PULSE APP
+# CCD  - COMMAND CENTER DASHBOARD APP
 
-Unofficial Command Center Dashboard Pulse App to improve communication between departments.
+Unofficial Command Center Dashboard App to improve communication between departments.
 
 * Critical Updates
 * Connections
