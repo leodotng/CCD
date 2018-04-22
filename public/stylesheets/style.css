@@ -1,8 +1,22 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  align-self: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+
+.vl {
+  border-left: 6px solid green;
+  border-right: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -3px;
+  margin-right: -3px;
+  top: 0;
 }
