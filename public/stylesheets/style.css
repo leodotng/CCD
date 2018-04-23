@@ -1,6 +1,6 @@
 body {
   padding: 5px;
-  font: 9px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 7px;
 }
 
@@ -10,6 +10,17 @@ a {
 div {
   overflow: hidden;
   white-space: nowrap;
+}
+
+.spacing {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.radio-spacing {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .option-style {

@@ -1,20 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Home</a>
   <button type="button" class="btn btn-primary btn-sm" onclick="window.location.reload(true)">Refresh</button>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,108 +43,123 @@
   <div class="container">
     <h1 class="display-4">Command Center Dashboard</h1>
     <p class="lead">DEN SWA Command Center dashboard app</p>
-    <h3><b>Critical Updates</b></h3>
+    <h3>
+      <b>Critical Updates</b>
+    </h3>
 
-      <form class="form-control" action="/" method="POST" id="">
+    <form class="form-control" action="/" method="POST" id="">
       <input type="text">
       <input type="submit" class="btn btn-danger btn-sm" value="Update">
-      </form>
-      <p>
-        {{#each criticalupdate}}
-        {{/each}}
-      </p>
+    </form>
+    <p>
+      {{#each criticalupdate}} {{/each}}
+    </p>
   </div>
 </div>
 
 
 <table class="table table-striped">
   <tbody>
-    {{!-- <tr>
+    {{!--
+    <tr>
       <td>
-      
-      <td>
+
+        <td>
     </tr> --}}
     <tr>
       <td>
-      <h3><b>Recent Gate Change</b></h3>
-    
-      <div>
-      OLD GATE Gate C
-      <form>
-      <input type="number" name="Gate" pattern="[0-9]" class="input-length" style="overflow:hidden"> Destination
-      <input type="text" name="Destination" class="input-length" style="overflow:hidden"> MOVE TO
-     
-      NEW GATE Gate C
-      <input type="text" name="Destination" class="input-length">
-      <input type="submit" class="btn btn-primary btn-sm" value="Update">
-      <br>
-      <select class="option-style">
-        <option value="MX">MX</option>
-        <option value="Holding">Holding for inbound connections</option>
-        <option value="Crew">Crew</option>
-        <option value="Fueling" selected>Fueling</option>
-      </select>
-      </form>
-      </div>
-      <td>
+        <div class="spacing">
+          <h3>
+            <b>Recent Gate Change</b>
+          </h3>
+
+          <div class="form-group spacing">
+            OLD GATE Gate C
+            <form action="/">
+              <input type="number" name="Gate" pattern="[0-9]" class="input-length" style="overflow:hidden"> Destination
+              <input type="text" name="Destination" class="input-length" style="overflow:hidden"> MOVE TO NEW GATE Gate C
+              <input type="text" name="Destination" class="input-length">
+              <input type="submit" class="btn btn-primary btn-sm" value="Update">
+              <br>
+              <select class="form-control spacing" id="exampleFormControlSelect1">
+                <option value="MX">MX</option>
+                <option value="Holding">Holding for inbound connections</option>
+                <option value="Crew">Crew</option>
+                <option value="Fueling" selected>Fueling</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        <td>
     </tr>
     <tr>
       <td>
-     <h3><b>Connections</b></h3>
-      <select>
-        <option value="Hold">Hold</option>
-        <option value="No Hold">No Hold</option>
-        <option value="Pax Rebooked">Pax Rebooked</option>
-      </select>
-      <input type="submit" class="btn btn-primary btn-sm" value="Update">
-      <td>
-    </tr>
-    <tr>
-      <td>
-      Services Potable water and lavs:
-      <form action="/">
-        <div class="form-group">
-          Gate C
-          <input type="number" name="Gate" class="input-length"> Destination
-          <input type="text" name="Destination" class="input-length">
-          <input type="radio" name="Potable Water" value="Potable Water" checked>Potable Water
-          <input type="radio" name="Lav Service" value="Lav Service" checked>Lav Service
+        <div class="spacing">
+          <h3>
+            <b>Connections</b>
+          </h3>
+          <select class="form-control spacing" id="exampleFormControlSelect1">
+            <option value="Hold">Hold</option>
+            <option value="No Hold">No Hold</option>
+            <option value="Pax Rebooked">Pax Rebooked</option>
+          </select>
           <input type="submit" class="btn btn-primary btn-sm" value="Update">
         </div>
-      </form>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        Services Potable water and lavs:
+        <form action="/">
+          <div class="form-group spacing">
+            Gate C
+            <input type="number" name="Gate" class="input-length"> Destination
+            <input type="text" name="Destination" class="input-length">
+            <input type="radio" name="Potable Water" value="Potable Water" checked class="radio-spacing">Potable Water
+            <input type="radio" name="Lav Service" value="Lav Service" class="radio-spacing">Lav Service
+            <input type="submit" class="btn btn-primary btn-sm" value="Update">
+
+          </div>
+        </form>
       </td>
     </tr>
     <tr>
       <td>
-      <h3><b>Late Flights</b></h3>
-      <form action="/">
-        <div class="form-group"></div>
-        Gate C
-        <input type="number" name="Gate" width="20" class="input-length"> Destination
-        <input type="text" name="Destination" class="input-length">
+        <h3>
+          <b>Late Flights</b>
+        </h3>
+        <form action="/">
+          <div class="form-group"></div>
+          Gate C
+          <input type="number" name="Gate" width="20" class="input-length spacing"> Destination
+          <input type="text" name="Destination" class="input-length spacing"> Minutes
+          <input type="text" name="Minutes" class="input-length spacing">
+
+          </div>
+
+          <select class="form-control spacing" id="exampleFormControlSelect1">
+            <option value="MX">MX</option>
+            <option value="Holding">Holding for inbound connections</option>
+            <option value="Crew">Crew</option>
+            <option value="Deadheaders">Deadheaders</option>
+            <option value="Fueling" selected>Fueling</option>
+            <option value="ATC/Ground Stop">ATC/Ground Stop</option>
+            <option value="Ops Agent Sucks">Ops Agent Sucks</option>
+          </select>
+          <input type="submit" class="btn btn-primary btn-sm spacing" value="Update">
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Shift Passdown
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
         <input type="submit" class="btn btn-primary btn-sm" value="Update">
-        </div>
-      </form>
-      <select class="option-style">
-        <option value="MX">MX</option>
-        <option value="Holding">Holding for inbound connections</option>
-        <option value="Crew">Crew</option>
-        <option value="Deadheaders">Deadheaders</option>
-        <option value="Fueling" selected>Fueling</option>
-        <option value="ATC/Ground Stop">ATC/Ground Stop</option>
-        <option value="Ops Agent Sucks">Ops Agent Sucks</option>
-      </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-      Shift Passdown
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-      <input type="submit" class="btn btn-primary btn-sm" value="Update">
       </td>
       <tr>
         <td>
-      <img src="./images/2770.png" height="200" width="200">
+          <img src="./images/2770.png" height="200" width="200">
       </tr>
       </td>
     </tr>
