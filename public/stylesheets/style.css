@@ -2,23 +2,38 @@ body {
   padding: 5px;
   font: 9px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 7px;
-
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
-
+div {
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 .option-style {
   width: 80px;
 }
 
-.input-length
-{
-    width: 50px;
-    
+.input-length {
+  width: 85px;
+  height: 40px;
+  font-size: 25px;
 }
 
+input[type="text"] {
+  padding: 2px 2px;
+  line-height: 24px;
+  font-size: 22px;
+  border-radius: 4px;
+  border: 2px solid #bbb;
+}
 
-input[type="text"]{ padding: 5px 5px; line-height: 8px; }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  border-radius: 4px;
+  border: 2px solid #bbb;
+}

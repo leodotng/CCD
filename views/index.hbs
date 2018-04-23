@@ -40,8 +40,11 @@
     <h1 class="display-4">Command Center Dashboard</h1>
     <p class="lead">DEN SWA Command Center dashboard app</p>
     <h3><b>Critical Updates</b></h3>
-      <textarea class="form-control" action="/criticalupdates" method="POST" id="exampleFormControlTextarea1" rows="1"></textarea>
+
+      <form class="form-control" action="/" method="POST" id="">
+      <input type="text">
       <input type="submit" class="btn btn-danger btn-sm" value="Update">
+      </form>
       <p>
         {{#each criticalupdate}}
         {{/each}}
@@ -52,23 +55,23 @@
 
 <table class="table table-striped">
   <tbody>
-    <tr>
+    {{!-- <tr>
       <td>
       
       <td>
-    </tr>
+    </tr> --}}
     <tr>
       <td>
       <h3><b>Recent Gate Change</b></h3>
     
-      <div class="form-group">
+      <div>
       OLD GATE Gate C
-      <input type="number" name="Gate" pattern="[0-9]" class="input-length"> Destination
-      <input type="text" name="Destination" class="input-length"> MOVE TO
-      <div class="form-group">
+      <form>
+      <input type="number" name="Gate" pattern="[0-9]" class="input-length" style="overflow:hidden"> Destination
+      <input type="text" name="Destination" class="input-length" style="overflow:hidden"> MOVE TO
+     
       NEW GATE Gate C
       <input type="text" name="Destination" class="input-length">
-      
       <input type="submit" class="btn btn-primary btn-sm" value="Update">
       <br>
       <select class="option-style">
@@ -133,7 +136,12 @@
       <td>
       Shift Passdown
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+      <input type="submit" class="btn btn-primary btn-sm" value="Update">
+      </td>
+      <tr>
+        <td>
       <img src="./images/2770.png" height="200" width="200">
+      </tr>
       </td>
     </tr>
   </tbody>

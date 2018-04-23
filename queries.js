@@ -1,10 +1,9 @@
-const db = require('./connection')
+const db = require('./connection');
 
-function getCriticalUpdates () {
-    return db('swaccd').select();
+function getCriticalUpdates(){
+    return db('criticalupdates').orderBy('details');
 }
-
 
 module.exports = {
-    getCriticalUpdates,
-}
+   getCriticalUpdates,  
+};
