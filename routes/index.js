@@ -3,18 +3,26 @@ var router = express.Router();
 var db = require('../queries');
 
 /* GET home page. */
+// router.get('/', function(req, res, next) {
+//   res.render('index');
+// });
+
 router.get('/', function(req, res, next) {
-  res.render('index');
+  db.getAllCriticalUpdates()
+  .then(criticalupdates => {
+    res.render('index', {
+      criticalupdates: criticalupdates
+    });
+  });
 });
 
-
-    
-
-// router.post('/', function(req, res, next) {
-//   db.('criticalupdates').insert({details: req.body.details}).then(function() {
-//     res.redirect('/');
-//   })
-// })
+router.post('/', function(req, res, next) {
+  db.addCriticalUpdates(req.body)
+  .then(newDetails => {
+    console.log(newDetails)
+    res.redirect('/')
+  })
+})
 
 
 

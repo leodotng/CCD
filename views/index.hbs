@@ -42,24 +42,25 @@
 <div>
   <div>
     <h1 class="display-4">Command Center Dashboard</h1>
+    
     <p>DEN SWA Command Center dashboard app</p>
   
     <h3>
       <b>Critical Updates</b>
     </h3>
     <div>
-      <form class="form-control" action="/criticalupdates" method="POST" id="">
-        <input type="text">
+      <form class="form-control" action="/" method="POST" id="">
+        <input type="text" name="details">
         <input type="submit" class="btn btn-danger btn-sm" value="Update">
       </form>
-    </div>
-    
-      <b>DETAILS HERE</b>
       <div class="details">
       {{#each criticalupdates}} 
-      <p><b>{{details}}</b></p>
+      <h1><b>{{details}}</b></h1>
       {{/each}}
       </div>
+    </div>
+    
+      
     
   </div>
 </div>
