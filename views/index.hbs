@@ -33,7 +33,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Find Flight" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
@@ -44,14 +44,24 @@
     <h1 class="display-4">Command Center Dashboard</h1>
 
     <p>DEN SWA Command Center dashboard app</p>
-    <div class="details critical-updates-bg">
-      {{#each criticalupdates}}
-      <h1>
-        <b>{{details}}</b>
-      </h1>
-      {{/each}}
-    </div>
+    <table class="table table-striped">
+      <tr>
+        <td>
+          <div class="details critical-updates-bg">
+            {{#each criticalupdates}}
+            <h3>
+              {{details}}
+            </h3>
 
+            {{/each}}
+          </div>
+          <form class="form-control" action="/" method="POST" id="">
+            <input type="submit" class="btn btn-danger btn-sm" value="DELETE">
+          </form>
+        </td>
+      </tr>
+
+    </table>
     <h3>
       <b>Critical Updates</b>
     </h3>
