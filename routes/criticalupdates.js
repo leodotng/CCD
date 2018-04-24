@@ -1,14 +1,14 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var db = require('../queries');
+var db = require("../queries");
 
 /* GET home page. */
-router.get('/criticalupdates', function(req, res, next) {
-  db.getAllCriticalUpdates()
-  .then(data => res.render('index', {
-    data:data
-  }))
+router.get("/criticalupdates", function(req, res, next) {
+  db.getAllCriticalUpdates().then(criticalupdates => {
+    res.render("index", {
+      criticalupdates: criticalupdates
+    });
+  });
 });
-
 
 module.exports = router;
