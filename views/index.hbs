@@ -39,47 +39,50 @@
   </div>
 </nav>
 
-<div>
-  <div>
+<div class="container">
+  <div class="container">
     <h1 class="display-4">Command Center Dashboard</h1>
-    
+
     <p>DEN SWA Command Center dashboard app</p>
-  
+    <div class="details critical-updates-bg">
+      {{#each criticalupdates}}
+      <h1>
+        <b>{{details}}</b>
+      </h1>
+      {{/each}}
+    </div>
+
     <h3>
       <b>Critical Updates</b>
     </h3>
-    <div>
+    <div class="container">
       <form class="form-control" action="/" method="POST" id="">
-        <input type="text" name="details">
+        <input type="text" name="details" class="input-length-crit">
         <input type="submit" class="btn btn-danger btn-sm" value="Update">
       </form>
-      <div class="details">
-      {{#each criticalupdates}} 
-      <h1><b>{{details}}</b></h1>
-      {{/each}}
-      </div>
+
     </div>
-    
-      
-    
+
+
+
   </div>
 </div>
 
 
 <table class="table table-striped">
   <tbody>
-    
+
     <tr>
       <td>
-        <div>
+        <div class="container">
           <h3>
             <b>Recent Gate Change</b>
           </h3>
 
-          <div class="form-group">
-            
+          <div class="form-group container">
+
             <form action="/">
-            OLD Gate C
+              OLD Gate C
               <input type="number" name="Gate" pattern="[0-9]" class="input-length" style="overflow:hidden"> Destination
               <input type="text" name="Destination" class="input-length" style="overflow:hidden"> MOVE TO NEW GATE Gate C
               <input type="text" name="Destination" class="input-length">
@@ -97,10 +100,10 @@
         </div>
         <td>
     </tr>
-    
+
     <tr>
       <td>
-        <div>
+        <div class="container">
           <h3>
             <b>Connections</b>
           </h3>
@@ -116,57 +119,63 @@
     </tr>
     <tr>
       <td>
-        <h3>
-          <b>Services Potable water and lavs:</b>
-        </h3>
-        <form action="/">
-          <div class="form-group spacing">
-            Gate C
-            <input type="number" name="Gate" class="input-length"> Destination
-            <input type="text" name="Destination" class="input-length">
-            <input class="radio-spacing" type="radio" name="Potable Water" value="Potable Water" checked>Potable Water
-            <input class="radio-spacing" type="radio" name="Lav Service" value="Lav Service">Lav Service
-            <input type="submit" class="btn btn-primary btn-sm" value="Update">
+        <div class="container">
+          <h3>
+            <b>Services Potable water and lavs:</b>
+          </h3>
+          <form action="/">
+            <div class="form-group spacing container">
+              Gate C
+              <input type="number" name="Gate" class="input-length"> Destination
+              <input type="text" name="Destination" class="input-length">
+              <input class="radio-spacing" type="radio" name="Potable Water" value="Potable Water" checked>Potable Water
+              <input class="radio-spacing" type="radio" name="Lav Service" value="Lav Service">Lav Service
+              <input type="submit" class="btn btn-primary btn-sm" value="Update">
 
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </td>
     </tr>
     <tr>
       <td>
-        <h3>
-          <b>Late Flights</b>
-        </h3>
-        <form action="/">
-          <div class="form-group">
-            Gate C
-            <input type="number" name="Gate" width="20" class="input-length spacing"> Destination
-            <input type="text" name="Destination" class="input-length spacing"> Minutes
-            <input type="text" name="Minutes" class="input-length spacing">
+        <div class="container">
+          <h3>
+            <b>Late Flights</b>
+          </h3>
+          <form action="/">
+            <div class="form-group">
+              Gate C
+              <input type="number" name="Gate" width="20" class="input-length spacing"> Destination
+              <input type="text" name="Destination" class="input-length spacing"> Minutes
+              <input type="text" name="Minutes" class="input-length spacing">
 
-          </div>
+            </div>
 
-          <select class="form-control spacing" id="exampleFormControlSelect1">
-            <option value="MX">MX</option>
-            <option value="Holding">Holding for inbound connections</option>
-            <option value="Crew">Crew</option>
-            <option value="Deadheaders">Deadheaders</option>
-            <option value="Fueling" selected>Fueling</option>
-            <option value="ATC/Ground Stop">ATC/Ground Stop</option>
-            <option value="Ops Agent Sucks">Ops Agent Sucks</option>
-          </select>
+            <select class="form-control spacing" id="exampleFormControlSelect1">
+              <option value="MX">MX</option>
+              <option value="Holding">Holding for inbound connections</option>
+              <option value="Crew">Crew</option>
+              <option value="Deadheaders">Deadheaders</option>
+              <option value="Fueling" selected>Fueling</option>
+              <option value="ATC/Ground Stop">ATC/Ground Stop</option>
+              <option value="Ops Agent Sucks">Ops Agent Sucks</option>
+            </select>
+            <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
+          </form>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <h3>
+            <b>Shift Passdown</b>
+          </h3>
+          <textarea class="form-control spacing" id="exampleFormControlTextarea1" rows="1"></textarea>
+
           <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
-        </form>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <h3>
-          <b>Shift Passdown</b>
-        </h3>
-        <textarea class="form-control spacing" id="exampleFormControlTextarea1" rows="1"></textarea>
-
-        <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
+        </div>
       </td>
 
       <tr>

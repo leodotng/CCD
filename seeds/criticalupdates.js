@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('criticalupdates').insert([
-        {details: 'Its Critical Dude!'},
+        {details: 'No PC air due to high winds'},
         
       ]);
     });
