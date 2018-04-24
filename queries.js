@@ -1,9 +1,15 @@
 const db = require('./connection');
 
-function getCriticalUpdates(){
-    return db('criticalupdates').orderBy('details');
+getAllCriticalUpdates = () => {
+    return db('criticalupdates')
 }
 
+getCriticalUpdateById = id => {
+    return db('criticalupdates').where('id', id)
+}
+
+
 module.exports = {
-   getCriticalUpdates,  
+    getAllCriticalUpdates,
+    getCriticalUpdateById, 
 };

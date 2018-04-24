@@ -47,46 +47,47 @@
       <b>Critical Updates</b>
     </h3>
     <div>
-      <form class="form-control" action="/" method="POST" id="">
+      <form class="form-control" action="/criticalupdates" method="POST" id="">
         <input type="text">
         <input type="submit" class="btn btn-danger btn-sm" value="Update">
       </form>
     </div>
-    <p>
-      {{#each criticalupdate}} {{/each}}
-    </p>
+    
+      DETAILS HERE
+      <div class="details">
+      {{#each data}} 
+      <p><b>{{this.details}}</b></p>
+      {{/each}}
+      </div>
+    
   </div>
 </div>
 
 
 <table class="table table-striped">
   <tbody>
-    {{!--
+    
     <tr>
       <td>
-
-        <td>
-    </tr> --}}
-    <tr>
-      <td>
-        <div class="spacing">
+        <div>
           <h3>
             <b>Recent Gate Change</b>
           </h3>
 
-          <div class="form-group spacing">
-            OLD GATE Gate C
+          <div class="form-group">
+            
             <form action="/">
+            OLD Gate C
               <input type="number" name="Gate" pattern="[0-9]" class="input-length" style="overflow:hidden"> Destination
               <input type="text" name="Destination" class="input-length" style="overflow:hidden"> MOVE TO NEW GATE Gate C
               <input type="text" name="Destination" class="input-length">
 
               <br>
               <select class="form-control field-spacing" id="exampleFormControlSelect1">
-                <option value="MX">MX</option>
+                <option value="MX" selected>MX</option>
                 <option value="Holding">Holding for inbound connections</option>
                 <option value="Crew">Crew</option>
-                <option value="Fueling" selected>Fueling</option>
+                <option value="Fueling">Fueling</option>
               </select>
               <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
             </form>
@@ -94,13 +95,14 @@
         </div>
         <td>
     </tr>
+    
     <tr>
       <td>
-        <div class="spacing">
+        <div>
           <h3>
             <b>Connections</b>
           </h3>
-          <select class="form-control spacing" id="exampleFormControlSelect1">
+          <select class="form-control" id="exampleFormControlSelect1">
             <option value="Hold">Hold</option>
             <option value="No Hold">No Hold</option>
             <option value="Pax Rebooked">Pax Rebooked</option>
