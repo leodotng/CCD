@@ -11,7 +11,7 @@ body {
   margin-bottom: 10px;
 }
 .critical-updates-bg {
-  background-color: red;
+  background-color: black;
   color: white;
   text-align: center;
 }
@@ -30,12 +30,12 @@ div {
   border: black;
 }
 
-/* .spacing {
+.spacing {
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
-} */
+}
 .radio-spacing {
   padding: 1em;
   padding-right: 5em;

@@ -44,19 +44,21 @@
     <h1 class="display-4">Command Center Dashboard</h1>
 
     <p>DEN SWA Command Center dashboard app</p>
+      {{#each criticalupdates}}
+            <h3>
+              {{details}}
+            
+              </h3>
+            {{/each}}
+    <p>DEN SWA Command Center dashboard app</p>
     <table class="table table-striped">
       <tr>
         <td>
-          <div class="details critical-updates-bg">
-            {{#each criticalupdates}}
-            <h3>
-              {{details}}
-            </h3>
 
-            {{/each}}
-          </div>
           <form class="form-control" action="/" method="POST" id="">
             <input type="submit" class="btn btn-danger btn-sm" value="DELETE">
+            <div class="criticalupdates critical-updates-bg">
+            </div>
           </form>
         </td>
       </tr>
@@ -66,10 +68,11 @@
       <b>Critical Updates</b>
     </h3>
     <div class="container">
-      <form class="form-control" action="/" method="POST" id="">
+      <form class="form-control" action="/addcriticalupdates" method="POST" id="">
         <input type="text" name="details" class="input-length-crit">
-        <input type="submit" class="btn btn-danger btn-sm" value="Update">
+        <input type="submit" class="btn btn-danger btn-sm" value="Add">
       </form>
+              
 
     </div>
 

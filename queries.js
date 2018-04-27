@@ -1,21 +1,16 @@
 const db = require('./connection');
 
-function getAllCriticalUpdates() {
-    return db.select('*').from('criticalupdates')
+function getCriticalUpdates() {
+    return db('criticalupdates').orderBy('details');
 }
 
-function addCriticalUpdates(newDetails) {
-    return db('criticalupdates').insert(newDetails).returning(['details'])
+function addCriticalUpdates(data) {
+    return db('criticalupdates').insert(data);
 }
-
-
-// getCriticalUpdateById = id => {
-//     return db('criticalupdates').where('criticalupdates.id', id)
-// }
-
 
 module.exports = {
-    getAllCriticalUpdates,
-    addCriticalUpdates
-    // getCriticalUpdateById, 
+    getCriticalUpdates,
+    addCriticalUpdates,
+    // getOneCriticalUpdate,
+    // deleteCriticalUpdate
 };
