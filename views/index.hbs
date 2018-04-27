@@ -44,13 +44,12 @@
     <h1 class="display-4">Command Center Dashboard</h1>
 
     <p>DEN SWA Command Center dashboard app</p>
-      {{#each criticalupdates}}
-            <h3>
-              {{details}}
-            
-              </h3>
-            {{/each}}
-    <p>DEN SWA Command Center dashboard app</p>
+    FUCK
+
+      {{#each criticalupdates }}
+      <p>{{this.details}}</p>
+      {{/each}}
+    </div>
     <table class="table table-striped">
       <tr>
         <td>
@@ -72,7 +71,7 @@
         <input type="text" name="details" class="input-length-crit">
         <input type="submit" class="btn btn-danger btn-sm" value="Add">
       </form>
-              
+
 
     </div>
 
@@ -185,9 +184,16 @@
           <h3>
             <b>Shift Passdown</b>
           </h3>
-          <textarea class="form-control spacing" id="exampleFormControlTextarea1" rows="1"></textarea>
+          <form action="/addshiftpassdown" method="POST" id="">
+            <textarea class="form-control spacing" name="details" id="exampleFormControlTextarea1" rows="1"></textarea>
 
-          <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
+            <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
+          </form>
+          <div>
+            {{#each shiftpassdown }}
+            <h3>{{this.details}}</h3>
+            {{/each}}
+          </div>
         </div>
       </td>
 
