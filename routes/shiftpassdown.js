@@ -13,22 +13,11 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
   db.addShiftPassDown(req.body)
-    .then(shift => {
-      res.redirect('/shiftpassdown')
+    .then(shiftData => {
+      res.render('index', {
+        shiftData: shiftData
       });
-    });
-
+    })
+});
 
 module.exports = router;
-
-
-
-// / Correctly posts
-
-
-// criticalupdates
-// gatechanges
-// connections
-// services
-// late flights
-// Shift Passdown

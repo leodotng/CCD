@@ -75,23 +75,23 @@ div {
 
 .input-length {
   width: 85px;
-  height: 48px;
-  font-size: 28px;
+  height: 28px;
+  font-size: 19px;
 }
 .input-length-crit {
   width: 80%;
-  height: 48px;
-  font-size: 25px;
+  height: 38px;
+  font-size: 19px;
   text-align: center;
 }
 
 input[type="text"] {
   margin: 2;
   padding: 2px 2px;
-  line-height: 48px;
-  font-size: 29px;
-  border-radius: 12px;
-  border: 2px solid #000000;
+  line-height: 21px;
+  font-size: 19px;
+  /* border-radius: 12px; */
+  /* border: 2px solid #000000; */
   text-justify: center;
   font-weight: 700;
   font-style: inherit;
@@ -105,12 +105,12 @@ input[type="number"]::-webkit-inner-spin-button {
   height: auto;
   -webkit-appearance: none;
   padding: 2px 2px;
-  line-height: 48px;
+  line-height: 21px;
   margin: 0;
-  border-radius: 3px;
+  /* border-radius: 1px; */
   text-justify: center;
   border: 2px solid #000000;
   font-weight: 700;
-  font-size: 29px;
+  font-size: 19px;
   font-style: inherit;
 } */

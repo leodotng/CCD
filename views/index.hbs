@@ -1,30 +1,100 @@
 
-    
+    <a href="/"><button class='success'>Home</button></a>
+<button class='success'>Critical Updates</button>
+<button class='success'>Gate Changes</button>
+<button class='success'>Connections</button>
+<button class='success'>Services</button>
+<button disabled>Late Flights</button>
+<a href="/shiftpassdown"><button class='success'>Shift Passdown</button></a>
 
-    <button>Critical Updates</button>
-<button class='success'>Gate Changes</button><br>
-{{#each shiftpassdown}}
-<h1>{{details}}</h1>
-<h1>test</h1>
-{{/each}}
+
+<h1>SWACCD - SWA COMMAND CENTER DASHBOARD APP</h1>
+
+
+<div class="container">
+    <h3>
+        <b>Recent Gate Change</b>
+    </h3>
+    <div class="">
+        <form action="/">
+            OLD Gate
+            <input type="text" name="Gate" pattern="[0-9]" class="input-length" style="overflow:hidden"> Destination
+            <input type="text" name="Destination" class="input-length" style="overflow:hidden"> MOVE TO NEW GATE
+            <input type="text" name="Destination" class="input-length">
+            <br>
+            <select class="form-control field-spacing" id="exampleFormControlSelect1">
+                <option value="MX" selected>MX</option>
+                <option value="Holding">Holding for inbound connections</option>
+                <option value="Crew">Crew</option>
+                <option value="Fueling">Fueling</option>
+            </select>
+            <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
+        </form>
+    </div>
 </div>
 
-<button class='warning'>Connections</button>
-<button class='error'>Services</button>
-<button disabled>Late Flights</button>
-<button disabled>Shift Passdown</button>
-<div>
-    <h1>test</h1>
+<div class="container">
+      <h3>
+        <b>Services Potable water and lavs:</b>
+      </h3>
+      <form action="/">
+        <div class="">
+          Gate
+          <input type="text" name="Gate" class="input-length"> Destination
+          <input type="text" name="Destination" class="input-length">
+          <label>
+  <input type="checkbox">
+  <span class="checkable">Potable Water</span>
+  </label>
+  <label>
+  <input type="checkbox">
+  <span class="checkable">Lavs</span>
+</label>
+Time 1st Call
+<input type="text" name="Time" class="input-length">
+
+          <input type="submit" class="btn btn-primary btn-sm" value="Update">
+        </div>
+      </form>
     </div>
+
+<div class="container">
+    <h3>
+        <b>Connections</b>
+    </h3>
+    <select class="form-control" id="exampleFormControlSelect1">
+        <option value="Hold">Hold</option>
+        <option value="No Hold">No Hold</option>
+        <option value="Pax Rebooked">Pax Rebooked</option>
+    </select>
+    <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
+</div>
+
+<hr>
+<div>
+    <h1>Shift Passdown</h1>
+</div>
 
 
 <form action="/shiftpassdown" method="POST" id="">
-        <textarea class="form-control spacing" name="details" id="" rows="3"></textarea>
+    <textarea class="form-control spacing" name="details" id="" rows="3"></textarea>
 
-        <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
-      </form>
-    <div>
-{{#each shiftData}}
-<h3>{{details}}</h3>
-{{/each}}
+    <input type="submit" class=shiftpassdown"btn btn-primary btn-sm button-spacing" value="Update">
+</form>
+<div>
+    {{#each shiftData}}
+    <h3>{{details}}</h3>
+    {{/each}}
+</div>
+<hr>
+<div class="container">
+    <h3>
+        <b>Critical Updates</b>
+    </h3>
+    <div class="container">
+        <form class="form-control" action="/addcriticalupdates" method="POST" id="">
+            <input type="text" name="details" class="input-length-crit">
+            <input type="submit" class="btn btn-danger btn-sm" value="Add">
+        </form>
+    </div>
 </div>
