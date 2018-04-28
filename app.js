@@ -9,8 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var criticalupdatesRouter = require('./routes/index')
 var shiftpassdownRouter = require('./routes/shiftpassdown')
-
-
+// var addcriticalupdatesRouter = require('./routes/criticalupdates')
 const queries = require('./queries');
 
 var app = express();
@@ -30,8 +29,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/criticalupdates', criticalupdatesRouter);
 app.use('/shiftpassdown', shiftpassdownRouter);
-
-
 
 
 // catch 404 and forward to error handler

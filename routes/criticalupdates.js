@@ -1,20 +1,21 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
-var db = require("../queries");
+var db = require('../queries');
 
-/* GET home page. */
-router.get("/criticalupdates", function(req, res, next) {
-  db.getAllCriticalUpdates().then(criticalupdates => {
-    res.render("picnic", picnic)
-  });
-});
+router.get('/', function (req, res, next) {
+  db.getAllCriticalUpdates()
+    .then(shiftData => {
+      res.render('index')
+      });
+    })
 
-// router.post('/', function(req, res, next) {
-//   db.addCriticalUpdates(req.body)
-//   .then(newDetails => {
-//     console.log(newDetails)
-//     res.redirect('/')
-//   })
-// })
+
+router.post('/addcriticalupdates', function (req, res, next) {
+  db.addCriticalUpdates(req.body)
+    .then(Data => {
+      res.render('index')
+      });
+    })
+
 
 module.exports = router;
