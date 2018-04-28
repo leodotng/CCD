@@ -7,6 +7,9 @@ var methodOverride = require('method-override')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var criticalupdatesRouter = require('./routes/index')
+var shiftpassdownRouter = require('./routes/shiftpassdown')
+
 
 const queries = require('./queries');
 
@@ -25,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/criticalupdates', criticalupdatesRouter);
+app.use('/shiftpassdown', shiftpassdownRouter);
+
 
 
 

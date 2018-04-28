@@ -1,209 +1,30 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Home</a>
-  <button type="button" class="btn btn-primary btn-sm" onclick="window.location.reload(true)">Refresh</button>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Critical Updates
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Recent Gate Changes</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          Flight Tracking
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">By Flight #</a>
-          <a class="dropdown-item" href="#">By Destinations</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">By City</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Database Connection</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Find Flight" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+    
 
-<div class="container">
-  <div class="container">
-    <h1 class="display-4">Command Center Dashboard</h1>
-
-    <p>DEN SWA Command Center dashboard app</p>
-    FUCK
-
-      {{#each criticalupdates }}
-      <p>{{this.details}}</p>
-      {{/each}}
-    </div>
-    <table class="table table-striped">
-      <tr>
-        <td>
-
-          <form class="form-control" action="/" method="POST" id="">
-            <input type="submit" class="btn btn-danger btn-sm" value="DELETE">
-            <div class="criticalupdates critical-updates-bg">
-            </div>
-          </form>
-        </td>
-      </tr>
-
-    </table>
-    <h3>
-      <b>Critical Updates</b>
-    </h3>
-    <div class="container">
-      <form class="form-control" action="/addcriticalupdates" method="POST" id="">
-        <input type="text" name="details" class="input-length-crit">
-        <input type="submit" class="btn btn-danger btn-sm" value="Add">
-      </form>
-
-
-    </div>
-
-
-
-  </div>
+    <button>Critical Updates</button>
+<button class='success'>Gate Changes</button><br>
+{{#each shiftpassdown}}
+<h1>{{details}}</h1>
+<h1>test</h1>
+{{/each}}
 </div>
 
+<button class='warning'>Connections</button>
+<button class='error'>Services</button>
+<button disabled>Late Flights</button>
+<button disabled>Shift Passdown</button>
+<div>
+    <h1>test</h1>
+    </div>
 
-<table class="table table-striped">
-  <tbody>
 
-    <tr>
-      <td>
-        <div class="container">
-          <h3>
-            <b>Recent Gate Change</b>
-          </h3>
+<form action="/shiftpassdown" method="POST" id="">
+        <textarea class="form-control spacing" name="details" id="" rows="3"></textarea>
 
-          <div class="form-group container">
-
-            <form action="/">
-              OLD Gate C
-              <input type="number" name="Gate" pattern="[0-9]" class="input-length" style="overflow:hidden"> Destination
-              <input type="text" name="Destination" class="input-length" style="overflow:hidden"> MOVE TO NEW GATE Gate C
-              <input type="text" name="Destination" class="input-length">
-
-              <br>
-              <select class="form-control field-spacing" id="exampleFormControlSelect1">
-                <option value="MX" selected>MX</option>
-                <option value="Holding">Holding for inbound connections</option>
-                <option value="Crew">Crew</option>
-                <option value="Fueling">Fueling</option>
-              </select>
-              <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
-            </form>
-          </div>
-        </div>
-        <td>
-    </tr>
-
-    <tr>
-      <td>
-        <div class="container">
-          <h3>
-            <b>Connections</b>
-          </h3>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option value="Hold">Hold</option>
-            <option value="No Hold">No Hold</option>
-            <option value="Pax Rebooked">Pax Rebooked</option>
-          </select>
-          <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
-        </div>
-      </td>
-
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <h3>
-            <b>Services Potable water and lavs:</b>
-          </h3>
-          <form action="/">
-            <div class="form-group spacing container">
-              Gate C
-              <input type="number" name="Gate" class="input-length"> Destination
-              <input type="text" name="Destination" class="input-length">
-              <input class="radio-spacing" type="radio" name="Potable Water" value="Potable Water" checked>Potable Water
-              <input class="radio-spacing" type="radio" name="Lav Service" value="Lav Service">Lav Service
-              <input type="submit" class="btn btn-primary btn-sm" value="Update">
-
-            </div>
-          </form>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <h3>
-            <b>Late Flights</b>
-          </h3>
-          <form action="/">
-            <div class="form-group">
-              Gate C
-              <input type="number" name="Gate" width="20" class="input-length spacing"> Destination
-              <input type="text" name="Destination" class="input-length spacing"> Minutes
-              <input type="text" name="Minutes" class="input-length spacing">
-
-            </div>
-
-            <select class="form-control spacing" id="exampleFormControlSelect1">
-              <option value="MX">MX</option>
-              <option value="Holding">Holding for inbound connections</option>
-              <option value="Crew">Crew</option>
-              <option value="Deadheaders">Deadheaders</option>
-              <option value="Fueling" selected>Fueling</option>
-              <option value="ATC/Ground Stop">ATC/Ground Stop</option>
-              <option value="Ops Agent Sucks">Ops Agent Sucks</option>
-            </select>
-            <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
-          </form>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <h3>
-            <b>Shift Passdown</b>
-          </h3>
-          <form action="/addshiftpassdown" method="POST" id="">
-            <textarea class="form-control spacing" name="details" id="exampleFormControlTextarea1" rows="1"></textarea>
-
-            <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
-          </form>
-          <div>
-            {{#each shiftpassdown }}
-            <h3>{{this.details}}</h3>
-            {{/each}}
-          </div>
-        </div>
-      </td>
-
-      <tr>
-        <td>
-          <img src="./images/2770.png" height="200" width="200">
-      </tr>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<button type="button" class="btn btn-primary btn-sm button-spacing" onclick="window.location.reload(true)">Refresh</button>
+        <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
+      </form>
+    <div>
+{{#each shiftData}}
+<h3>{{details}}</h3>
+{{/each}}
+</div>

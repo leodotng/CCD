@@ -1,8 +1,8 @@
 
 exports.up = function(knex, Promise) {
   return Promise.all ([ knex.schema.createTable('criticalupdates', function (table){
-    table.increments('id')
-    table.varchar('details')
+    table.increments('id');
+    table.text('details');
   })
 
   ])
