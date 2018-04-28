@@ -10,33 +10,6 @@ router.get('/', function (req, res, next) {
   });
 });
 
-/* GET Critical Updates and display them */
-
-router.get('/', function(req, res, next) {
-  db.getAllCriticalUpdates()
-  .then(criticalupdates => {
-    res.render('picnic', {
-      criticalupdates: criticalupdates
-    });
-  });
-});
-
-router.get("/criticalupdates", function(req, res, next) {
-  db.getAllCriticalUpdates().then(criticalupdates => {
-    res.render("index", {
-      criticalupdates: criticalupdates
-    });
-  });
-});
-
-// This correctly posts into database!!!
-router.post('/addcriticalupdates', function (req, res, next) {
-  db.addCriticalUpdates(req.body)
-    .then(data => {
-      res.render('picnic')
-    });
-});
-
 
 
 module.exports = router;

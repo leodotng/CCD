@@ -23,7 +23,8 @@
             <input type="text" name="Destination" class="input-length">
             <br>
             <select class="form-control field-spacing" id="exampleFormControlSelect1">
-                <option value="MX" selected>MX</option>
+                <option value="Gate Conflict" selected>Gate Conflict</option>
+                <option value="MX">MX</option>
                 <option value="Holding">Holding for inbound connections</option>
                 <option value="Crew">Crew</option>
                 <option value="Fueling">Fueling</option>
@@ -76,10 +77,10 @@ Time 1st Call
 </div>
 
 
-<form action="/shiftpassdown" method="POST" id="">
+<form action="/" method="POST" id="">
     <textarea class="form-control spacing" name="details" id="" rows="3"></textarea>
 
-    <input type="submit" class=shiftpassdown"btn btn-primary btn-sm button-spacing" value="Update">
+    <input type="submit" class="btn btn-primary btn-sm button-spacing" value="Update">
 </form>
 <div>
     {{#each shiftData}}
