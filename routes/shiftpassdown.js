@@ -16,7 +16,7 @@ router.post('/', function (req, res, next) {
   const shift = {details: req.body.details}
   db.addShiftPassDown(shift)
     .then(shift => {
-      res.redirect('/shiftpassdown')
+      res.redirect('/')
       })
     })
 
