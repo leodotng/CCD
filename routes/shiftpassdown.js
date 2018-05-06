@@ -11,14 +11,24 @@ router.get('/', function (req, res, next) {
       })
     });
 
+router.get('/:id', (req, res, next) => {
+  const id = req.params.id
+  db.getSingleShiftPassDown(id)
+  .then(singleShiftPassDown => {
+    singleShiftPassDown = singleShiftPassDown[0]
+    res.render('index')
+  }) 
+})
+
 
 router.post('/', function (req, res, next) {
   const shift = {details: req.body.details}
   db.addShiftPassDown(shift)
-    .then(shift => {
+    .then(shiftData => {
       res.redirect('/')
-      })
+      });
     })
+
 
 
 module.exports = router;
